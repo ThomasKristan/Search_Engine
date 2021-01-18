@@ -1,39 +1,39 @@
 public class Document {
     //Attributes
-    private String title;
-    private String language;
-    private String summary;
+    public static final String[] SUFFICES = {"isierung", "fizieren", "fikation", "isieren", "gerecht", "würdig",
+            "schaft", "haltig", "meter", "logie", "legen", "kunde", "ismus", "ieren", "gemäß", "fähig", "artig", "wert",
+            "voll", "ling", "lich", "lein", "keit", "ität", "isch", "iren", "heit", "haft", "fach", "chen", "ung",
+            "tum", "sam", "nis", "mut", "mal", "los", "ist", "ion", "ent", "end", "eln", "bar", "ant", "or", "iv", "in",
+            "ig", "ie", "er", "en", "ei", "al", "ab"};
+
+    private String title = "";
+    private String language = "";
+    private String summary = "";
     private Date releaseDate;
     private Author author;
     private WordCountsArray wordCounts = new WordCountsArray(0);
-
-    public static final String[] SUFFICES = {"ab", "al", "ant", "artig", "bar", "chen", "ei", "eln", "en", "end", "ent", "er", "fach", "fikation", "fizieren", "fähig",
-            "gemäß", "gerecht", "haft", "haltig", "heit", "ie", "ieren", "ig", "in", "ion", "iren", "isch", "isieren", "isierung",
-            "ismus", "ist", "ität", "iv", "keit", "kunde", "legen", "lein", "lich", "ling", "logie", "los", "mal", "meter", "mut",
-            "nis", "or", "sam", "schaft", "tum", "ung", "voll", "wert", "würdig"};
-
 
 
     //Constructor
 
     public Document(String title, String language, String summary, Date releaseDate, Author author, String content){
-        this.setTitle(title);
-        this.setAuthor(author);
-        this.setLanguage(language);
-        this.setSummary(summary);
-        this.releaseDate = releaseDate;
-        this.addContent(content);
+        setTitle(title);
+        setAuthor(author);
+        setLanguage(language);
+        setSummary(summary);
+        setReleaseDate(releaseDate);
+        setContent(content);
     }
 
     //<editor-fold desc="Getter / Setter Methods">
 
     //Getter-Methods
-    public Author getAuthor() { return author; }
-    public String getTitle() {return title; }
-    public String getLanguage() { return language; }
-    public String getSummary() { return summary; }
-    public Date getReleaseDate() { return releaseDate; }
-    public WordCountsArray getWordCounts(){ return wordCounts; }
+    public Author getAuthor() { return this.author; }
+    public String getTitle() {return this.title; }
+    public String getLanguage() { return this.language; }
+    public String getSummary() { return this.summary; }
+    public Date getReleaseDate() { return this.releaseDate; }
+    public WordCountsArray getWordCounts(){ return this.wordCounts; }
 
     //Setter-Methods
     public void setAuthor(Author author) {
@@ -41,34 +41,37 @@ public class Document {
     }
 
     public void setTitle(String title) {
-        if (title == null) {
-            this.title = "";
-        } else {
+        if (title != null)
             this.title = title;
-        }
     }
 
     public void setLanguage(String language) {
-        if (language == null) {
-            this.language = "";
-        } else {
+        if (language != null)
             this.language = language;
-        }
     }
 
     public void setSummary(String summary) {
-        if (summary == null) {
-            this.summary = "";
-        } else {
+        if (summary != null)
             this.summary = summary;
-        }
+    }
+
+    public void setContent(String content){
+        if (content != null)
+            addContent(content);
+    }
+
+    public void setReleaseDate(Date releaseDate){
+        if(releaseDate != null && releaseDate.getAgeInDaysAt(new Date()) >= 0)
+            this.releaseDate = releaseDate;
+        else
+            this.releaseDate = new Date();
     }
 
     //</editor-fold>
 
     //toString-Method
-    public String toString() {
-        return "Document: " + this.title + " by " + this.author;
+    public String toString(){
+        return this.title + ", " + author.toString();
     }
 
     //further methods

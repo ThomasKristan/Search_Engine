@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a92db697-40bd-40ab-be8d-85679cdf14e5" name="Default Changelist" comment="" />
+    <list default="true" id="a92db697-40bd-40ab-be8d-85679cdf14e5" name="Default Changelist" comment="Test class&#10;improving Date, Document and WordCountsArray classes">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/suchmaschine/Date.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/suchmaschine/Date.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/suchmaschine/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/suchmaschine/Document.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/suchmaschine/TestWordCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/suchmaschine/TestWordCount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/suchmaschine/WordCountsArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/suchmaschine/WordCountsArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WordCountsArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordCountsArray.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,10 +26,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1fUmYHyMV3l8ZRP9C0wOS503BGW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15136719" />
@@ -42,7 +59,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestWordCount">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="suchmaschine" />
@@ -59,8 +76,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestWordCount" />
         <item itemvalue="Application.Test" />
+        <item itemvalue="Application.TestWordCount" />
       </list>
     </recent_temporary>
   </component>
@@ -83,11 +100,29 @@
       <workItem from="1601815695116" duration="525000" />
       <workItem from="1610452728572" duration="2893000" />
       <workItem from="1610460392928" duration="7223000" />
-      <workItem from="1610484792089" duration="31068000" />
+      <workItem from="1610484792089" duration="43291000" />
+      <workItem from="1610986934286" duration="248000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test class&#10;improving Date, Document and WordCountsArray classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test class&#10;improving Date, Document and WordCountsArray classes" />
   </component>
 </project>
