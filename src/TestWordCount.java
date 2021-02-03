@@ -8,5 +8,9 @@ public class TestWordCount {
         System.out.println(testObject.incrementCount());
         System.out.println(testObject.incrementCount(-13));
         System.out.println(testObject.incrementCount(28));
+        Date datum = new Date(1, 1, 1970);
+        Date today = new Date(8, 11, 2013);
+        int tage = datum.getAgeInDaysAt(today);
+        System.out.println("TAGE:" + tage);
     }
 }

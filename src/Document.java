@@ -74,7 +74,6 @@ public class Document {
         return this.title + ", " + author.toString();
     }
 
-    //further methods
     public int getAgeAt (Date today) {
         return this.releaseDate.getAgeInDaysAt(today);
     }
@@ -176,4 +175,21 @@ public class Document {
             this.wordCounts.add(words[i], 1);
         }
     }
+
+    public boolean equals(Document document){
+        if (this == document){
+            return true;
+        }
+        if (this == null){
+            return false;
+        }
+        return this.language.equals(document.language) && this.summary.equals(document.summary)
+                && this.title.equals(document.title)
+                && ((this.author != null && this.author.equals(document.author))
+                    || (this.author == null && document.author == null))
+                && ((this.releaseDate != null && this.releaseDate.equals(document.releaseDate))
+                    || (this.releaseDate == null && document.releaseDate == null))
+                && ((this.wordCounts != null && this.wordCounts.equals(document.getWordCounts()))
+                    || (this.wordCounts == null && document.getWordCounts() == null));
+     }
 }

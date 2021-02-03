@@ -11,7 +11,6 @@ public class WordCountsArray {
         }
     }
 
-    //Further Methods
     public void add (String word, int count){
         if((word != null) && word.length() != 0){
             int firstEmptyIndex = this.size();
@@ -34,7 +33,7 @@ public class WordCountsArray {
 
     public String getWord(int index){
         if (index <= -1 || index >= this.size())
-            return "";
+            return null;
         return wordArr[index].getWord();
     }
 
@@ -69,5 +68,19 @@ public class WordCountsArray {
             Info = Info + " | [" + i + "]" + " null";
         return Info;
     }
+
+    public boolean equals(WordCountsArray wordCountsArray){
+        if(this == null || this.size() != wordCountsArray.size())
+            return false;
+        if(this == wordCountsArray)
+            return true;
+        for(int i=0; i< this.size(); i++){
+            if(!this.getWord(i).equals(wordCountsArray.getWord(i)) || this.getCount(i) != wordCountsArray.getCount(i)){
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
 

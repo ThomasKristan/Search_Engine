@@ -38,7 +38,6 @@ public class WordCount {
 
     //</editor-fold
 
-    //Further Methods
     public int incrementCount() {
         return ++wordCounter;
     }
@@ -48,5 +47,13 @@ public class WordCount {
             this.wordCounter += n;
         }
         return this.wordCounter;
+    }
+
+    public boolean equals(WordCount wordCount){
+        if(this == null)
+            return false;
+        if(this == wordCount)
+            return true;
+        return this.word.equals(wordCount.word) && this.wordCounter == wordCount.wordCounter;
     }
 }

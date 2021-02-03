@@ -70,8 +70,24 @@ public class Author {
                 "residence: " + this.residence;
     }
 
-    //further Methods
     public int getAgeAt(Date today) {
         return this.birthday.getAgeInYearsAt(today);
+    }
+
+    public boolean equals(Author author){
+        if(author == this) {
+            return true;
+        }
+        if(author == null){
+            return false;
+        }
+        boolean equalName = this.toString().equals(author.toString());
+        boolean equalContact = (this.email.equals(author.email) && this.residence.equals(author.residence));
+        boolean equalBirthday = this.birthday.equals(author.birthday);
+
+        return this.firstName.equals(author.firstName) && this.lastName.equals(author.lastName)
+                && this.residence.equals(author.residence) && this.email.equals(author.email)
+                && ((this.birthday != null && this.birthday.equals(author.birthday))
+                    || (this.birthday == null && author.birthday == null));
     }
 }
