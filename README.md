@@ -1,3 +1,3 @@
 # Search_Engine
 
-Implementation of a search engine which shows the most relevant results for a query.
+Implementation of a search engine which shows the most relevant results for a given query.
