@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a92db697-40bd-40ab-be8d-85679cdf14e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/suchmaschine/META-INF/suchmaschine.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/suchmaschine/WordCountsArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/suchmaschine/WordCountsArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestWordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestWordCount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WordCountsArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordCountsArray.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,7 +74,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Test.CheckDatum">
+  <component name="RunManager" selected="Application.TestWordCount">
     <configuration name="TestWordCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TestWordCount" />
       <module name="suchmaschine" />
@@ -118,8 +121,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Test.CheckDatum" />
         <item itemvalue="Application.TestWordCount" />
+        <item itemvalue="JUnit.Test.CheckDatum" />
         <item itemvalue="JUnit.Test" />
         <item itemvalue="JUnit.TestSuchmaschine" />
         <item itemvalue="JUnit.MatrixVectorOperationsTest" />
@@ -151,7 +154,9 @@
       <workItem from="1611312447148" duration="1137000" />
       <workItem from="1611594594754" duration="105000" />
       <workItem from="1611835267618" duration="41112000" />
-      <workItem from="1613055101743" duration="5222000" />
+      <workItem from="1613055101743" duration="8095000" />
+      <workItem from="1613141364309" duration="21000" />
+      <workItem from="1613141469485" duration="9238000" />
     </task>
     <task id="LOCAL-00001" summary="Test class&#10;improving Date, Document and WordCountsArray classes">
       <created>1610987187560</created>
@@ -189,6 +194,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test class&#10;improving Date, Document and WordCountsArray classes" />
     <MESSAGE value="Test class&#10;improving classes Date, Document and WordCountsArray" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test class&#10;improving classes Date, Document and WordCountsArray" />
+    <MESSAGE value="Improving WordCountsArray class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improving WordCountsArray class" />
   </component>
 </project>

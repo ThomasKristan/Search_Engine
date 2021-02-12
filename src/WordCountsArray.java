@@ -109,6 +109,59 @@ public class WordCountsArray {
         return true;
     }
 
+    /**
+     * Calculates the scalar product of this instance and the specified wordCountsArray instance.
+     * If this instance an the specified instance do not administer the same words and do not have
+     * the same length, the scalar product is 0.
+     * @param wca   the wordCountArray instance that will be multiplied with this instance.
+     * @return      the scalar product between this instance and the specified wordCountsArray instance.
+     */
+    private double scalarProduct(WordCountsArray wca){
+        if (!wordsEqual(wca)){
+            return 0;
+        }
+        int result = 0;
+        for (int i=0; i<this.wordArr.length; i++){
+            result += this.getCount(i) * wca.getCount(i);
+        }
+        return result;
+    }
+
+    /**
+     * Sorts the WordCount objects administered by this instance.
+     * After calling this method the administered WordCount objects are
+     * ordered lexicographically according to the words represented by the
+     * WordCount objects.
+     */
+    public void sort(){
+        int minIndex;
+        for(int i=0; i<actualSize; i++){
+            minIndex = i;
+            for(int j = i+1; j<actualSize; j++){
+                if(wordArr[minIndex].getWord().compareTo(wordArr[j].getWord()) > 0)
+                    minIndex = j;
+            }
+            WordCount temp = wordArr[i];
+            wordArr[i] = wordArr[minIndex];
+            wordArr[minIndex] = temp;
+        }
+    }
+
+    public double computeSimilarity(WordCountsArray wca){
+        if(wca == null){
+            return 0;
+        }
+
+        this.sort();
+        wca.sort();
+
+        double scalarProductThis = this.scalarProduct(this);
+        double scalarProductWca = wca.scalarProduct(wca);
+        if(scalarProductThis != 0 && scalarProductWca != 0)
+            return this.scalarProduct(wca) / Math.sqrt(scalarProductThis * scalarProductWca);
+        return 0;
+    }
+
     public int size(){
         for (int i = 0; i < wordArr.length; i++){
             if (wordArr[i] == null)
