@@ -147,13 +147,15 @@ public class WordCountsArray {
         }
     }
 
+    /**
+     * Calculates the similarity of this instance and the specified WordCountsArray.
+     * @param wca   the compared WordCountsArray instance
+     * @return      the similarity on a scale from 0 to 1.  if wca is null -> 0 returned
+     */
     public double computeSimilarity(WordCountsArray wca){
         if(wca == null){
             return 0;
         }
-
-        this.sort();
-        wca.sort();
 
         double scalarProductThis = this.scalarProduct(this);
         double scalarProductWca = wca.scalarProduct(wca);
@@ -162,6 +164,9 @@ public class WordCountsArray {
         return 0;
     }
 
+    /**
+     * @return  the number of words currently administered by this instance.
+     */
     public int size(){
         for (int i = 0; i < wordArr.length; i++){
             if (wordArr[i] == null)
@@ -170,18 +175,34 @@ public class WordCountsArray {
         return wordArr.length;
     }
 
+    /**
+     * @param index     the index
+     * @return          the word at the position index of the WordCount-Array
+     */
     public String getWord(int index){
         if (index <= -1 || index >= this.size())
             return null;
         return wordArr[index].getWord();
     }
 
+    /**
+     *
+     * @param index     the index
+     * @return          the count of the word at the position index or -1 if index is illegal
+     */
     public int getCount(int index){
         if (index <= -1 || index >= this.size())
             return -1;
         return wordArr[index].getWordCounter();
     }
 
+    /**
+     * Sets the count of the word at position index of the WordCount-Array to the specified count.
+     * If the specified index is illegal, nothing will happen. If the specified count is lower
+     * than 0, the count is set to 0.
+     * @param index     index
+     * @param count     the new count of the word at position index
+     */
     public void setCount(int index, int count){
         if(index >= 0 && index < this.size() && count <= 0)
             wordArr[index].setWordCounter(0);
@@ -189,14 +210,9 @@ public class WordCountsArray {
             wordArr[index].setWordCounter(count);
     }
 
-    private WordCount[] copyContent(WordCount[] targetArr){
-        int max = (targetArr.length - wordArr.length) >= 0 ? wordArr.length : targetArr.length;
-        for(int i=0; i<wordArr.length; i++){
-            targetArr[i] = wordArr[i];
-        }
-        return targetArr;
-    }
-
+    /**
+     * @return the entire WordCountsArray as a readable String
+     */
     public String toString(){
         String Info = "";
         if (wordArr.length == 0)
@@ -208,6 +224,10 @@ public class WordCountsArray {
         return Info;
     }
 
+    /**
+     * @param wordCountsArray   the other WordCountArray
+     * @return                  true, if the instance and the specified WordCountArray are equal
+     */
     public boolean equals(WordCountsArray wordCountsArray){
         if(this == null || this.size() != wordCountsArray.size())
             return false;
@@ -220,7 +240,12 @@ public class WordCountsArray {
         }
         return true;
     }
- 
+
+    /**
+     * @param word      the word of which we want to know the index
+     * @return          the index of the specified word in the internal array,
+     *                  or -1 if the word is not administered.
+     */
     public int getIndexOfWord(String word){
         if (word == null || word.equals("")){
             return -1;
